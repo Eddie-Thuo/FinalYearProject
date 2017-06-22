@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/icon_person" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/personal_info_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            style="@style/ProfileDetailsHeadingsTheme"
+            android:textColor="@android:color/black"
+            android:hint="Personal Info" />
+
+        <EditText
+            android:id="@+id/student_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personal_info_text_view"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:text="MR"
+            android:hint="Student Title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/first_name_field"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="Eddie "
+            android:layout_below="@id/student_title"
+            android:hint="Student First Name"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student First Name"
+            android:layout_marginBottom="16dp"/>
+
+
+        <EditText
+            android:id="@+id/surname_field"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:clickable="false"
+            android:text="Thuo"
+            android:layout_height="wrap_content"
+            android:hint="Student Surname" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Surname"
+            android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/divider_color"
+            android:layout_marginBottom="3dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+

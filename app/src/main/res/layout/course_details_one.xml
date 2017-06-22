@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#075e54">
+
+            <TextView
+                android:id="@+id/module_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"
+                android:textColor="@android:color/white"
+                android:text="Programming 1" />
+
+            <TextView
+                android:id="@+id/module_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/module_name"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:text="(Sept-Jan)" />
+
+            <TextView
+                android:id="@+id/lecture_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/module_date"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Lecturer" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/lecture_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/lecture_text"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/nealharman" />
+
+            <TextView
+                android:id="@+id/lecture_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lecture_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/lecture_image"
+                android:textColor="@android:color/white"
+                android:text="Mr Neal Harman"
+
+                />
+
+            <TextView
+                android:id="@+id/lecture_deparment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/lecture_name"
+                android:layout_below="@id/lecture_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:textColor="@android:color/white"
+                android:text="Department of Computer Science" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/current_grades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Current Grades" />
+            <View
+                android:layout_below="@id/current_grades"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+
+            <TextView
+                android:id="@+id/coursework_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/current_grades"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:text="Coursework 1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/current_grades"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:text="53%" />
+
+
+            <TextView
+                android:id="@+id/coursework_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coursework_1"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:text="Coursework 2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/coursework_2"
+                android:layout_below="@id/coursework_2"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:text="77%" />
+
+            <TextView
+                android:id="@+id/coursework_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coursework_2"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Coursework 3" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/coursework_3"
+                android:textStyle="bold"
+                android:layout_below="@id/coursework_2"
+                android:layout_marginRight="10dp"
+                android:text="68%" />
+
+            <TextView
+                android:id="@+id/exam_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coursework_3"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Exam (January)" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/exam_1"
+                android:textStyle="bold"
+                android:layout_below="@id/coursework_2"
+                android:layout_marginRight="10dp"
+                android:text="69%" />
+
+
+            <TextView
+                android:id="@+id/exam_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exam_1"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:text="Exam (June)" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:layout_alignTop="@id/exam_2"
+                android:layout_below="@id/coursework_2"
+                android:layout_marginRight="10dp"
+                android:text="54%" />
+
+            <TextView
+                android:id="@+id/overall_Grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exam_2"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:text="Overall Grade: Pass" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

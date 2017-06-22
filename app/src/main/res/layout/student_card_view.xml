@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+    <RelativeLayout
+        android:id="@+id/yo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/student_contact_details"
+            android:id="@+id/contact_details"/>
+
+        <include layout="@layout/student_home_address"
+            android:id="@+id/home_address"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@id/contact_details"/>
+
+        <include layout="@layout/student_contact_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_address"
+            />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

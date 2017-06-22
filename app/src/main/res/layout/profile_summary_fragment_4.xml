@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.6">
+
+            <RelativeLayout
+                android:id="@+id/image_view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#075e54">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image_space"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@android:color/white"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/profile_image" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/student_card_view" />
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/pic_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_anchor="@id/image_view1"
+        android:layout_marginRight="16dp"
+        app:layout_anchorGravity="end|bottom|right"
+        android:src="@drawable/icon_take_pic"
+        android:scaleType="centerInside" />
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+

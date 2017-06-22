@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/student_info_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/person_details_option"
+            android:checked="false"
+            android:icon="@drawable/icon_person"
+            android:title="Personal Details" />
+
+        <item
+            android:id="@+id/course_details_option"
+            android:checked="false"
+            android:icon="@drawable/icon_graduation_cap"
+            android:title="Course Details" />
+
+        <item
+            android:id="@+id/course_contacts_option"
+            android:checked="false"
+            android:icon="@drawable/icon_person"
+            android:title="Course Contacts" />
+
+        <item
+            android:id="@+id/exam_option"
+            android:checked="false"
+            android:icon="@drawable/icon_exam_timetable"
+            android:title="Exam Info" />
+
+    </group>
+
+    <group android:id="@+id/social_media_group">
+        <item android:title="Social Media">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/su_union_option"
+                        android:checked="false"
+                        android:icon="@drawable/icon_web"
+                        android:title="Student Union" />
+
+                    <item
+                        android:id="@+id/twitter_option"
+                        android:checked="false"
+                        android:icon="@drawable/twitterlogo"
+                        android:title="Twitter" />
+                    <item
+                        android:id="@+id/instagram_option"
+                        android:checkable="false"
+                        android:icon="@drawable/instagram"
+                        android:title="Instagram"/>
+                </group>
+            </menu>
+        </item>
+
+    </group>
+
+    <group android:id="@+id/other_info_group">
+        <item android:title="Other Services">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/faq_option"
+                        android:checked="false"
+                        android:icon="@drawable/icon_faq"
+                        android:title="FAQ &amp; Feedback" />
+
+                    <item
+                        android:id="@+id/contact_option"
+                        android:checked="false"
+                        android:icon="@drawable/icon_phone"
+                        android:title="Contact Us" />
+
+                    <item
+                        android:id="@+id/log_out_option"
+                        android:checked="false"
+                        android:icon="@drawable/icon_log_out"
+                        android:title="Log Out" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
+
+</menu>

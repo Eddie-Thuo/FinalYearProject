@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:layout_marginLeft="8dp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp">
+
+        <TextView
+            android:id="@+id/first_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Swansea University"
+            />
+
+        <TextView
+            android:id="@+id/second_line"
+            android:text="Bay Campus, Fabian Way, Crymlyn Burrows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/first_line"
+            />
+
+        <TextView
+            android:id="@+id/post_code_address"
+            android:text="SA1 8EN "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/second_line"
+            />
+        <TextView
+            android:id="@+id/bay_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0179 604066"
+            android:layout_below="@id/post_code_address"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

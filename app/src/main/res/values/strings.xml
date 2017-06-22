@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">SimpleSignIn</string>
+    <string name="welcome_text">Welcome!</string>
+    <string name="sign_in">Sign In Now</string>
+    <string name="enter_details_below">Enter Login Details below</string>
+    <string name="sign_in_activity_email">Sign In Now</string>
+    <string name="need_help">HELP</string>
+    <string name="forgot_password">Forgot Password? Click Here</string>
+    <string name="change_personal_details">Edit Details</string>
+    <string name="save_personal_details">Save Changes</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="closeDrawer">Navigation View</string>
+    <string name="openDrawer">Navigation View Closed</string>
+    <string name="action_settings">Settings</string>
+    <string name="singleton_campus_address">Swansea University Singleton Park Swansea SA2 8PP Wales, UK</string>
+    <string name="bay_campus_address">Swansea University Bay Campus Fabian Way Crymlyn Burrows Swansea SA1 8EN Wales, UK</string>
+
+
+    <string-array name="faq_questions">
+        <item>Do I need to stay in Swansea for the exam period?</item>
+        <item>What does TB1 and TB2 mean? How do I know when a class/module is taught?</item>
+        <item>I am unable to attend an examination. What should I do?</item>
+        <item>How does the University publish results?</item>
+        <item>Will my attendance at the University be monitored?</item>
+        <item>What should I do if I am unable to attend teaching sessions or examinations?</item>
+
+    </string-array>
+
+    <string-array name="faq_answers">
+        <item>Semester 1 modules in Engineering, Mathematics, Biological Sciences, Computer Science, Business, Economics and Geography are all assessed by examination in January and students are required to be present for these examinations.
+            Subjects outside of these areas may offer alternative assessment in Semester 1 (TB1) only.
+            Students are required to speak to their home department College Office at the beginning of their period of study to enquire whether this is an option.
+        </item>
+
+        <item>TB1 = semester 1 - these modules/classes are taught in semester 1 only. Please check the module information to find out when the module/class is assessed.
+            TB2 = semester 2 - these modules/classes are taught in semester 2 only and will be assessed in semester 2.
+            TB1+2 = Academic year modules - these modules/classes are only available to students spending the full academic year at Swansea. Single semester students must NOT select these modules.
+        </item>
+
+        <item>
+        It is essential that you inform your personal tutor or a member of the College’s administration as a matter of urgency if you are unable to attend an examination.
+            If you are unable to contact a member of staff in your College you should phone the examination office on 01792 602164.
+        </item>
+
+        <item>
+            You will be able to access your module marks and end of year progression decision or for final year students your award result via your intranet record on a specified date following the exam board.
+            You will be sent information regarding the date of publication and instructions for accessing your result by email from the Academic Registry.
+        </item>
+
+        <item>The University monitors the attendance of students and student engagement with their programme on a regular basis.
+            It does this in the student’s academic interest ensuring that the students are supported and offered advice to enable them to perform at their best.
+            By monitoring student attendance the University can also identify those students who are having personal difficulties and offer appropriate advice.
+            The University’s is also obliged to monitor the overseas student’s engagement with their programmes on behalf of the UKVI.
+        </item>
+
+        <item>
+            The University expects students to attend every teaching session.  However if you are unable to attend you should inform your Personal Tutor.
+            If you are absent for 7 days or more due to illness please also provide your College with a medical certificate.
+        </item>
+
+
+
+    </string-array>
+</resources>
