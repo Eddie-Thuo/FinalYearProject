@@ -4,19 +4,24 @@ include('config.php');
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-  $studentNo = $_POST['studentNumber2'];
+  $studentNo = $_POST['studentNo2'];
 
-  $query = "select moduleID, mtitle, firstname, lastname, email, telephone, image from Staff natural join StudentModules
-  natural join StaffContact natural join Modules natural join StaffPhotos where studentID = '$studentNo';";
+  $query2 = "SELECT moduleID, mtitle, firstname, lastname, email, telephone, image FROM Staff NATURAL JOIN StudentModules
+  NATURAL JOIN StaffContact NATURAL JOIN Modules NATURAL JOIN StaffPhotos WHERE studentID = ? ";
 
-  $result = mysqli_query($con,$query);
+  $stmt = $con->prepare($query2);
+  $stmt->bind_param("s", $student_number2);
+  $student_number2 = $studentNo2;
+  $stmt->execute();
+  $result = $stmt->get_result();
 
-  $number_of_rows = mysqli_num_rows($result);
+  // $result = mysqli_query($con,$query2);
+  // $number_of_rows = mysqli_num_rows($result);
+  $number_of_rows = $result->num_rows;
   $temp_array = array();
   if($number_of_rows > 0){
-    while($row = mysqli_fetch_assoc($result)){
+    while($row = $result ->fetch_assoc()){
     // $temp_array[] = $row;
-
     $temp_array[] = array(
       'moduleID' => $row['moduleID'],
       'mtitle' => $row['mtitle'],
