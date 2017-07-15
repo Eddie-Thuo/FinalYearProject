@@ -3,7 +3,6 @@
     android:id="@+id/timetable_recycler_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:background="@color/main_color">
+    android:layout_width="match_parent">
 
 </android.support.v7.widget.RecyclerView>

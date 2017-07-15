@@ -19,10 +19,6 @@ import android.widget.Toast;
 
 public class InstagramFragment extends Fragment {
 
-    public static Fragment newInstance() {
-        return new InstagramFragment();
-    }
-
     private WebView mInstagramWebView;
     private ProgressBar mProgressBar;
     private final String INSTAGRAM_URL = "https://www.instagram.com/swanseauni/";

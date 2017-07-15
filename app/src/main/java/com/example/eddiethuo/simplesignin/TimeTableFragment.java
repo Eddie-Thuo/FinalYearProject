@@ -38,14 +38,12 @@ import StudentsCoursesProfs.ExamDetails;
 
 public class TimeTableFragment extends Fragment {
 
-    public static TimeTableFragment newInstance() {
-        return new TimeTableFragment();
-    }
     private static final String TAG = "TimeTableFragment";
 
     private RecyclerView mRecyclerview;
     private static final String URL = "http://192.168.0.16/RequestDetails/RequestExamDetails.php";
     private static final String URL2 = "http://137.44.90.149/RequestDetails/RequestExamDetails.php";
+    private static final String URL3 = "https://thuoeddie.000webhostapp.com/RequestExamDetails.php";
     private List<ExamDetails> mAllExamDetails = new ArrayList<>();
 
     @Override
@@ -161,7 +159,7 @@ public class TimeTableFragment extends Fragment {
             HashMap<String, String> param = new HashMap<>();
             param.put("studentNumber1", params[0]);
             RequestHandler requestHandler = new RequestHandler();
-            String response = requestHandler.sendPostRequest(URL2, param);
+            String response = requestHandler.sendPostRequest(URL3, param);
             return response;
         }
 

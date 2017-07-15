@@ -19,10 +19,6 @@ import java.util.List;
 
 public class CourseDetailsPagerFragment extends Fragment {
 
-    public static CourseDetailsPagerFragment newInstance(){
-        return new CourseDetailsPagerFragment();
-    }
-
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
 

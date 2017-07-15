@@ -34,15 +34,10 @@ public class ProfileSummaryFragment2 extends Fragment {
     private static final String PHOTO_DIALOG = "photo dialog";
     private final int MAX_BITMAP_DIMENSION = 4096;
 
-    public ProfileSummaryFragment2 newInstance() {
-        Bundle args = new Bundle();
-        return new ProfileSummaryFragment2();
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.profile_summary_fragment_4, container, false);
-        SingleFragmentActivity.mToolbar.setVisibility(View.VISIBLE);
         mPicButton = (FloatingActionButton) v.findViewById(R.id.pic_button);
         mImageView = (CircleImageView) v.findViewById(R.id.profile_image_space);
         mPicButton.setOnClickListener(new View.OnClickListener() {

@@ -25,7 +25,6 @@ public class FetchingDetails {
     public List<ExamDetails> parseExamDetails(String response)
             throws JSONException, IOException {
         List<ExamDetails> allDetails = new ArrayList<>();
-
         JSONArray array = new JSONArray(response);
         for (int i = 0; i < array.length(); i++) {
             JSONObject exam = array.getJSONObject(i);
@@ -43,7 +42,6 @@ public class FetchingDetails {
     public List<ProfDetails> parseStaffContactDetails(String response)
             throws JSONException, IOException {
         List<ProfDetails> allDetails = new ArrayList<>();
-
         JSONArray array = new JSONArray(response);
         for (int i = 0; i < array.length(); i++) {
             JSONObject staff = array.getJSONObject(i);

@@ -20,10 +20,6 @@ import android.widget.Toast;
 
 public class StudentsUnionFragment extends Fragment {
 
-    public static Fragment newInstance(){
-        return new StudentsUnionFragment();
-    }
-
     private WebView mWebView;
     private ProgressBar mProgressbar;
     private static final String UNION_URL = "https://www.swansea-union.co.uk";

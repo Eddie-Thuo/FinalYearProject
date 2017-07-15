@@ -19,7 +19,7 @@
 
         <activity
             android:name=".SignInActivity"
-            android:label="@string/sign_in_activity_email"
+            android:label="Welcome"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,45 +31,8 @@
             android:name=".AnswerActivity"
             android:label="Answer"></activity>
 
-        <activity
-            android:name=".ProfileSummaryActivity"
-            android:label="Profile Details"></activity>
-
-        <activity
-            android:name=".CourseContactsActivity"
-            android:label="Course Contacts">
-
-        </activity>
-
-        <activity
-            android:name=".StudentUnionActivity"
-            android:label="Student Union">
-
-        </activity>
-
-        <activity
-            android:name=".TwitterActivity"
-            android:label="Twitter">
-        </activity>
-
-        <activity
-            android:name=".TimeTableActivity"
-            android:label="Exam Info">
-        </activity>
-
-        <activity
-            android:name=".FAQListActivity"
-            android:label="FAQ">
-        </activity>
-
-        <activity
-            android:name=".InstagramActivity"
-            android:label=" Swansea University Instagram">
-        </activity>
-
-        <activity
-            android:name=".ContactUsActvity"
-            android:label="Contact Info">
+        <activity android:name=".MainActivity"
+            android:label="Main">
         </activity>
 
     </application>

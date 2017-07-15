@@ -1,4 +1,4 @@
-package com.example.eddiethuo.simplesignin;
+package StudentsCoursesProfs;
 
 import android.content.Context;
 
@@ -12,6 +12,7 @@ public class ExamTimetable {
     private String[] codes = {"CSC-M37", "CSC-M38", "CSC-M39"};
     private String[] titles = {"Programming 1", "Programming 2", "Programming 3"};
     private String[] venues = {"Brangwyn Hall, Victoria Park", "Brangwyn Hall, Victoria Park", "Brangwyn Hall, Victoria Park"};
+
     private ExamTimetable(){
     }
 

@@ -3,15 +3,11 @@ package Dialogs;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.widget.Toast;
-
-import com.example.eddiethuo.simplesignin.R;
-import com.example.eddiethuo.simplesignin.SignInFragment2;
-import com.example.eddiethuo.simplesignin.SingleFragmentActivity;
+import com.example.eddiethuo.simplesignin.SignInActivity;
 
 /**
  * Created by eddiethuo on 12/03/2017.
@@ -33,15 +29,12 @@ public class SignOutDialog extends DialogFragment {
                 .setPositiveButton("Sign out", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //go back to SignInFragment
-                        SignInFragment2 signInFragment = new SignInFragment2();
-                        FragmentManager fm = getFragmentManager();
-                        fm.beginTransaction().replace(R.id.fragment_container, signInFragment).commit();
-                        SingleFragmentActivity.mToolbar.setTitle("Sign In Now");
-                        SingleFragmentActivity.actionBarDrawerToggle.setDrawerIndicatorEnabled(false);
+                        Intent signOutIntent = new Intent(getActivity(), SignInActivity.class);
+                        startActivity(signOutIntent);
                         Toast.makeText(getActivity(), "You have successfully signed out", Toast.LENGTH_LONG).show();
                     }
                 })
                 .show();
     }
+
 }

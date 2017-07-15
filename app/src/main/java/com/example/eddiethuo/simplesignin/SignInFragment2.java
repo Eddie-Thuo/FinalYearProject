@@ -1,23 +1,14 @@
 package com.example.eddiethuo.simplesignin;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.widget.CardView;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -56,8 +47,6 @@ public class SignInFragment2 extends Fragment {
         mSignInButton = (Button) v.findViewById(R.id.sign_in_student_button);
         mPasswordField = (EditText) v.findViewById(R.id.student_password_field);
         mStudentNoField = (EditText) v.findViewById(R.id.student_number_field);
-        SingleFragmentActivity.mToolbar.setVisibility(View.GONE);
-        SingleFragmentActivity.mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         mSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,14 +110,6 @@ public class SignInFragment2 extends Fragment {
         }
 
         private void performSignedInTransition(){
-            SingleFragmentActivity.mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
-            SingleFragmentActivity.actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
-            SingleFragmentActivity.mToolbar.setTitle("Personal Details");
-            FragmentManager fm = getActivity().getSupportFragmentManager();
-            FragmentTransaction ft = fm.beginTransaction()
-                    .setCustomAnimations(android.R.anim.slide_in_left,
-                            android.R.anim.slide_out_right);
-            ft.replace(R.id.fragment_container, new ProfileSummaryFragment2().newInstance()).commit();
         }
     }
 

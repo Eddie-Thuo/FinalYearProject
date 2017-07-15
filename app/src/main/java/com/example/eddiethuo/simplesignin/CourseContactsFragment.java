@@ -40,13 +40,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class CourseContactsFragment extends Fragment {
 
-    public static Fragment newInstance() {
-        return new CourseContactsFragment();
-    }
+
     private static final String TAG = "CourseContactsFragment";
     private static final String CONTACT_STAFF = "CourseContactsFragment";
     private static final String URL = "http://192.168.0.16/RequestDetails/RequestStaffContactDetails.php";
     private static final String URL2 = "http://137.44.90.149/RequestDetails/RequestStaffContactDetails.php";
+    private static final String URL3 = "https://thuoeddie.000webhostapp.com/RequestStaffContactDetails.php";
     private List<ProfDetails> mAllStaffDetails = new ArrayList<>();
     private RecyclerView mRecyclerview1;
 
@@ -154,7 +153,7 @@ public class CourseContactsFragment extends Fragment {
             HashMap<String, String> param = new HashMap<>();
             param.put("studentNumber2", params[0]);
             RequestHandler requestHandler = new RequestHandler();
-            String response = requestHandler.sendPostRequest(URL2, param);
+            String response = requestHandler.sendPostRequest(URL3, param);
             return response;
         }
 

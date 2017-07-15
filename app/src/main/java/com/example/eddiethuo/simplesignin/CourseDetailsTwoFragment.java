@@ -14,7 +14,6 @@ import android.widget.Button;
 public class CourseDetailsTwoFragment extends Fragment {
 
 
-    private Button mButton;
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container,  Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.course_details_two, container, false);

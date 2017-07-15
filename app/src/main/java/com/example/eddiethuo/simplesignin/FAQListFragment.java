@@ -30,9 +30,7 @@ public class FAQListFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private QuestionAdapter mAdapter;
 
-    public static Fragment newInstance(){
-        return new FAQListFragment();
-    }
+
 
 
     @Override
@@ -64,7 +62,6 @@ public class FAQListFragment extends Fragment {
         }
         @Override
         public void onClick(View v){
-            //Intent intent = FAQListActivity.newIntent(getActivity(), question, answer);
             Intent intent2 = AnswerActivity.newIntent(getActivity(), question, answer);
             startActivity(intent2);
         }
@@ -109,7 +106,6 @@ public class FAQListFragment extends Fragment {
     @Override
     public void onResume(){
         super.onResume();
-        //Log.i("Toolbar in FAQListFragment", SingleFragmentActivity.mToolbar.getTitle().toString());
     }
 
 }

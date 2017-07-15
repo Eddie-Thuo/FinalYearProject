@@ -21,9 +21,6 @@ import android.widget.Toast;
 
 public class TwitterFragment extends Fragment {
 
-    public static Fragment newInstance() {
-        return new TwitterFragment();
-    }
 
     private WebView mWebView;
     private ProgressBar mLoadingWebPage;
