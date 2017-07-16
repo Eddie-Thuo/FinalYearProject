@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Fade;
 import android.transition.Slide;
 import android.view.Gravity;
 import android.view.View;
@@ -110,12 +111,13 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     private void performSignedInTransition(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(SignInActivity.this).toBundle());
+        finishAfterTransition();
     }
     private void setUpAnimations(){
-        Slide slide = new Slide(Gravity.LEFT);
-        slide.setDuration(1000);
-        getWindow().setExitTransition(slide);
-        getWindow().setReenterTransition(slide);
+        Fade fade = new Fade();
+        fade.setDuration(1000);
+        getWindow().setExitTransition(fade);
+        getWindow().setReenterTransition(fade);
         getWindow().setAllowReturnTransitionOverlap(false);
     }
 }

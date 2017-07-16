@@ -15,7 +15,6 @@ import com.example.eddiethuo.simplesignin.SignInActivity;
 
 public class SignOutDialog extends DialogFragment {
 
-
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
         return new AlertDialog.Builder(getActivity())
@@ -32,6 +31,7 @@ public class SignOutDialog extends DialogFragment {
                         Intent signOutIntent = new Intent(getActivity(), SignInActivity.class);
                         startActivity(signOutIntent);
                         Toast.makeText(getActivity(), "You have successfully signed out", Toast.LENGTH_LONG).show();
+                        getActivity().finish();
                     }
                 })
                 .show();

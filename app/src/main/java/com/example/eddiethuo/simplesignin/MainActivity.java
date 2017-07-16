@@ -11,9 +11,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
+import android.view.animation.AnticipateOvershootInterpolator;
 
 import Dialogs.SignOutDialog;
 
@@ -25,10 +26,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static Toolbar mToolbar;
     public static ActionBarDrawerToggle actionBarDrawerToggle;
     public static String SIGN_OUT_DIALOG = "SignOutDialog";
+    private FragmentManager fm;
+    private static final String TAG = "MainActivity";
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TAG, "onCreate()");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_view);
         mToolbar = (Toolbar) findViewById(R.id.toool_bar);
@@ -40,18 +45,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mDrawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         setUpWindowAnimation();
-        FragmentManager fm = getSupportFragmentManager();
+        fm = getSupportFragmentManager();
         Fragment initialFragment = fm.findFragmentById(R.id.fragment_container);
         if (initialFragment == null) {
+            mNavigationView.getMenu().getItem(0).setChecked(true);
+            mToolbar.setTitle("Personal Details");
             initialFragment = new ProfileSummaryFragment2();
             fm.beginTransaction().add(R.id.fragment_container, initialFragment).commit();
 
         }
-
     }
 
     @Override
-    public boolean onNavigationItemSelected(MenuItem item){
+    public boolean onNavigationItemSelected(MenuItem item) {
         displayMenuFragment(item);
         return true;
     }
@@ -106,11 +112,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.log_out_option:
                 setToolbarTitle(itemId);
+                SignOutDialog dialog = new SignOutDialog();
+                dialog.show(fm, SIGN_OUT_DIALOG);
                 mDrawerLayout.closeDrawers();
                 break;
         }
 
-        if(fragment != null){
+        if (fragment != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             ft.replace(R.id.fragment_container, fragment).commit();
@@ -118,18 +126,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    private void setToolbarTitle(MenuItem item){
+    private void setToolbarTitle(MenuItem item) {
         mToolbar.setTitle(item.getTitle());
     }
 
-    private void setUpWindowAnimation(){
-        Slide slide = new Slide(Gravity.TOP);
-        slide.setDuration(500);
-        getWindow().setExitTransition(slide);
+    private void setUpWindowAnimation() {
+        Slide slide = new Slide(Gravity.LEFT);
+        slide.setDuration(1000);
+        slide.setInterpolator(new AnticipateOvershootInterpolator());
+        getWindow().setEnterTransition(slide);
         getWindow().setReenterTransition(slide);
-        getWindow().setAllowReturnTransitionOverlap(false);
     }
-
 
     @Override
     public void onBackPressed() {
@@ -138,6 +145,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public void onPause() {
+        Log.i(TAG, "onPause()");
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        Log.i(TAG, "OnResume()");
+        super.onResume();
+
+    }
+
+    @Override
+    public void onStop(){
+        Log.i(TAG, "onStop()");
+        super.onStop();
+    }
+
+    @Override
+    public void onRestart(){
+        Log.i(TAG, "onRestart()");
+        super.onRestart();
+    }
+
+    @Override
+    public void onDestroy(){
+        Log.i(TAG, "onDestroy()");
+        super.onDestroy();
     }
 
 
