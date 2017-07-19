@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 mDrawerLayout.closeDrawers();
                 break;
             case R.id.course_contacts_option:
-                fragment = new CourseContactsFragment();
+                fragment = new ContactDetailsPagerFragment();
                 setToolbarTitle(itemId);
                 mDrawerLayout.closeDrawers();
                 break;
